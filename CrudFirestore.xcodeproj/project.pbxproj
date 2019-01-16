@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CFADECAC55A367DFAB342F1 /* Pods_CrudFirestore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AD3D1E0201AD2BD4638D9F4 /* Pods_CrudFirestore.framework */; };
+		D76DB48021EF775800AC5D8E /* Usuarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76DB47F21EF775800AC5D8E /* Usuarios.swift */; };
 		D7BD833921EF64970044B6ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BD833821EF64970044B6ED /* AppDelegate.swift */; };
 		D7BD833B21EF64970044B6ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BD833A21EF64970044B6ED /* ViewController.swift */; };
 		D7BD833E21EF64970044B6ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7BD833C21EF64970044B6ED /* Main.storyboard */; };
 		D7BD834021EF64980044B6ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7BD833F21EF64980044B6ED /* Assets.xcassets */; };
 		D7BD834321EF64980044B6ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7BD834121EF64980044B6ED /* LaunchScreen.storyboard */; };
+		D7BD834B21EF66BE0044B6ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7BD834A21EF66BD0044B6ED /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0447C33FD36DDDE54AB4CEFB /* Pods-CrudFirestore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrudFirestore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrudFirestore/Pods-CrudFirestore.debug.xcconfig"; sourceTree = "<group>"; };
+		4AD3D1E0201AD2BD4638D9F4 /* Pods_CrudFirestore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CrudFirestore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F84C6FD3AEAD9ADF8DA8BA1 /* Pods-CrudFirestore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrudFirestore.release.xcconfig"; path = "Pods/Target Support Files/Pods-CrudFirestore/Pods-CrudFirestore.release.xcconfig"; sourceTree = "<group>"; };
+		D76DB47F21EF775800AC5D8E /* Usuarios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuarios.swift; sourceTree = "<group>"; };
 		D7BD833521EF64970044B6ED /* CrudFirestore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrudFirestore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7BD833821EF64970044B6ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7BD833A21EF64970044B6ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +29,7 @@
 		D7BD833F21EF64980044B6ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7BD834221EF64980044B6ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7BD834421EF64980044B6ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7BD834A21EF66BD0044B6ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CFADECAC55A367DFAB342F1 /* Pods_CrudFirestore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8FB0AD979BD6474BE19D7173 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4AD3D1E0201AD2BD4638D9F4 /* Pods_CrudFirestore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C01BC05D5993E7145357548A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0447C33FD36DDDE54AB4CEFB /* Pods-CrudFirestore.debug.xcconfig */,
+				6F84C6FD3AEAD9ADF8DA8BA1 /* Pods-CrudFirestore.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D7BD832C21EF64970044B6ED = {
 			isa = PBXGroup;
 			children = (
 				D7BD833721EF64970044B6ED /* CrudFirestore */,
 				D7BD833621EF64970044B6ED /* Products */,
+				C01BC05D5993E7145357548A /* Pods */,
+				8FB0AD979BD6474BE19D7173 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,10 +84,12 @@
 			children = (
 				D7BD833821EF64970044B6ED /* AppDelegate.swift */,
 				D7BD833A21EF64970044B6ED /* ViewController.swift */,
+				D76DB47F21EF775800AC5D8E /* Usuarios.swift */,
 				D7BD833C21EF64970044B6ED /* Main.storyboard */,
 				D7BD833F21EF64980044B6ED /* Assets.xcassets */,
 				D7BD834121EF64980044B6ED /* LaunchScreen.storyboard */,
 				D7BD834421EF64980044B6ED /* Info.plist */,
+				D7BD834A21EF66BD0044B6ED /* GoogleService-Info.plist */,
 			);
 			path = CrudFirestore;
 			sourceTree = "<group>";
@@ -71,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D7BD834721EF64980044B6ED /* Build configuration list for PBXNativeTarget "CrudFirestore" */;
 			buildPhases = (
+				4DE6DF14DDDDE41DFD90A209 /* [CP] Check Pods Manifest.lock */,
 				D7BD833121EF64970044B6ED /* Sources */,
 				D7BD833221EF64970044B6ED /* Frameworks */,
 				D7BD833321EF64970044B6ED /* Resources */,
+				3DDDBF24DB552F75014D02D7 /* [CP] Embed Pods Frameworks */,
+				81A9AAFFF95CBCF76EB7C39A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7BD834321EF64980044B6ED /* LaunchScreen.storyboard in Resources */,
+				D7BD834B21EF66BE0044B6ED /* GoogleService-Info.plist in Resources */,
 				D7BD834021EF64980044B6ED /* Assets.xcassets in Resources */,
 				D7BD833E21EF64970044B6ED /* Main.storyboard in Resources */,
 			);
@@ -130,12 +164,94 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3DDDBF24DB552F75014D02D7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CrudFirestore/Pods-CrudFirestore-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CrudFirestore/Pods-CrudFirestore-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DE6DF14DDDDE41DFD90A209 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CrudFirestore-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81A9AAFFF95CBCF76EB7C39A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CrudFirestore/Pods-CrudFirestore-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore/gRPCCertificates-Firestore.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates-Firestore.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CrudFirestore/Pods-CrudFirestore-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D7BD833121EF64970044B6ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D7BD833B21EF64970044B6ED /* ViewController.swift in Sources */,
+				D76DB48021EF775800AC5D8E /* Usuarios.swift in Sources */,
 				D7BD833921EF64970044B6ED /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +396,7 @@
 		};
 		D7BD834821EF64980044B6ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0447C33FD36DDDE54AB4CEFB /* Pods-CrudFirestore.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +415,7 @@
 		};
 		D7BD834921EF64980044B6ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F84C6FD3AEAD9ADF8DA8BA1 /* Pods-CrudFirestore.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
