@@ -44,14 +44,32 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         performSegue(withIdentifier: "enviar", sender: self)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "enviar"{
-            if let id = tabla.indexPathForSelectedRow{
+        if segue.identifier == "enviar"
+        {
+            if let id = tabla.indexPathForSelectedRow
+            {
                 let fila = listaUsuarios[id.row]
                 let destino = segue.destination as! EditarViewController
                 destino.editarUsuario = fila
                 
+                if let index = self.tabla.indexPathForSelectedRow
+                {
+                    self.tabla.deselectRow(at: index, animated: true)
+                }
+                
             }
         }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let borrar = UITableViewRowAction(style: .destructive, title: "Eliminar") { (action, indexPath) in
+            let user : Usuarios
+            user = self.listaUsuarios[indexPath.row]
+            let id = user.id
+            self.getRef.collection("usuarios").document(id!).delete()
+        }
+        return[borrar]
     }
     
     func realTime()

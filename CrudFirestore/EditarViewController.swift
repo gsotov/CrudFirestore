@@ -38,11 +38,7 @@ class EditarViewController: UIViewController {
     
     @IBAction func editar(_ sender: UIButton)
     {
-        let dataNombre = nombre.text
-        let dataApellido = apellido.text
-        
-        if dataNombre == nil || dataApellido == nil
-        {
+
             let campos : [String:Any] = ["nombre": nombre.text!,
                                          "apellido": apellido.text!]
             ref.setData(campos) { (error) in
@@ -54,22 +50,11 @@ class EditarViewController: UIViewController {
                     self.dismiss(animated: true, completion: nil)
                 }
             }
-        }
-        else
-        {
-            
-            let alert = UIAlertController(title: "Alerta", message: "Debes completar todos los campos", preferredStyle: .alert)
-            
-            alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
-            
-            self.present(alert, animated: true)
-            
-        }
-        
-        
+
     }
-    
-    @IBAction func cancelar(_ sender: UIButton) {
+        
+    @IBAction func cancelar(_ sender: UIButton)
+    {
         dismiss(animated: true, completion: nil)
     }
     /*
