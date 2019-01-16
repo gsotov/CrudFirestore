@@ -107,11 +107,92 @@
                         <outlet property="apellido" destination="TtC-yl-wPI" id="Yyq-PS-ewc"/>
                         <outlet property="nombre" destination="dZq-0C-5wj" id="CKV-AG-g3D"/>
                         <outlet property="tabla" destination="M2f-iJ-y0t" id="bdX-5c-FMA"/>
+                        <segue destination="7bW-EK-EVX" kind="show" identifier="enviar" id="zTK-Ea-DFB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
+        </scene>
+        <!--Editar View Controller-->
+        <scene sceneID="H9v-nP-s5r">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="7bW-EK-EVX" customClass="EditarViewController" customModule="CrudFirestore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HhO-P7-ajN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y0K-HK-DoU">
+                                <rect key="frame" x="67" y="211" width="241" height="245"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZOl-4R-7NA">
+                                        <rect key="frame" x="17" y="27" width="205" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellido" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E1m-Wv-HW9">
+                                        <rect key="frame" x="18" y="65" width="205" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7y-vP-N1l">
+                                        <rect key="frame" x="70" y="122" width="98" height="30"/>
+                                        <color key="backgroundColor" red="0.92156862750000001" green="0.0" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Editar">
+                                            <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="editar:" destination="7bW-EK-EVX" eventType="touchUpInside" id="KZr-s2-C5C"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4o-MB-hYW">
+                                        <rect key="frame" x="71" y="160" width="98" height="30"/>
+                                        <color key="backgroundColor" red="0.92156862750000001" green="0.0" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Cancelar">
+                                            <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelar:" destination="7bW-EK-EVX" eventType="touchUpInside" id="MXJ-5R-3b1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.91595914879999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="c4o-MB-hYW" firstAttribute="leading" secondItem="y0K-HK-DoU" secondAttribute="leading" constant="71" id="Eam-0w-xvJ"/>
+                                    <constraint firstItem="ZOl-4R-7NA" firstAttribute="leading" secondItem="y0K-HK-DoU" secondAttribute="leading" constant="17" id="FzZ-hp-aaa"/>
+                                    <constraint firstItem="G7y-vP-N1l" firstAttribute="leading" secondItem="y0K-HK-DoU" secondAttribute="leading" constant="70" id="PEH-Em-zrZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="G7y-vP-N1l" secondAttribute="trailing" constant="73" id="Qyr-5A-c14"/>
+                                    <constraint firstAttribute="trailing" secondItem="c4o-MB-hYW" secondAttribute="trailing" constant="72" id="Tuw-nh-pOc"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZOl-4R-7NA" secondAttribute="trailing" constant="19" id="U7d-Wf-Mk4"/>
+                                    <constraint firstAttribute="trailing" secondItem="E1m-Wv-HW9" secondAttribute="trailing" constant="18" id="g31-D1-Sue"/>
+                                    <constraint firstItem="G7y-vP-N1l" firstAttribute="top" secondItem="E1m-Wv-HW9" secondAttribute="bottom" constant="27" id="h1N-BT-JBR"/>
+                                    <constraint firstItem="c4o-MB-hYW" firstAttribute="top" secondItem="G7y-vP-N1l" secondAttribute="bottom" constant="8" id="h2U-m7-XYH"/>
+                                    <constraint firstItem="E1m-Wv-HW9" firstAttribute="top" secondItem="ZOl-4R-7NA" secondAttribute="bottom" constant="8" id="l5m-ME-NKF"/>
+                                    <constraint firstItem="ZOl-4R-7NA" firstAttribute="top" secondItem="y0K-HK-DoU" secondAttribute="top" constant="27" id="oAm-WE-fJT"/>
+                                    <constraint firstItem="E1m-Wv-HW9" firstAttribute="leading" secondItem="y0K-HK-DoU" secondAttribute="leading" constant="18" id="r5n-Rk-xWa"/>
+                                    <constraint firstAttribute="bottom" secondItem="c4o-MB-hYW" secondAttribute="bottom" constant="55" id="sED-3b-Uda"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="0.54248715753424659" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="y0K-HK-DoU" firstAttribute="centerX" secondItem="HhO-P7-ajN" secondAttribute="centerX" id="PJ0-Bw-6Tq"/>
+                            <constraint firstItem="y0K-HK-DoU" firstAttribute="centerY" secondItem="HhO-P7-ajN" secondAttribute="centerY" id="dcf-Sb-W9x"/>
+                            <constraint firstItem="y0K-HK-DoU" firstAttribute="top" secondItem="Ux9-Km-av0" secondAttribute="top" constant="191" id="rIc-pa-RS3"/>
+                            <constraint firstItem="y0K-HK-DoU" firstAttribute="leading" secondItem="Ux9-Km-av0" secondAttribute="leading" constant="67" id="sNR-Ac-KvI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ux9-Km-av0"/>
+                    </view>
+                    <connections>
+                        <outlet property="apellido" destination="E1m-Wv-HW9" id="I6U-Vy-H9M"/>
+                        <outlet property="nombre" destination="ZOl-4R-7NA" id="hV0-fn-Y0C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bwA-ej-Y57" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="893.60000000000002" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>

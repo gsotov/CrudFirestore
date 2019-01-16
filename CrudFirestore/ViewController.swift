@@ -25,7 +25,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tabla.delegate = self
         tabla.dataSource = self
         getRef = Firestore.firestore()
-        self.todo()
+        //self.todo()
         self.realTime()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -40,12 +40,46 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return listaUsuarios.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "enviar", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "enviar"{
+            if let id = tabla.indexPathForSelectedRow{
+                let fila = listaUsuarios[id.row]
+                let destino = segue.destination as! EditarViewController
+                destino.editarUsuario = fila
+                
+            }
+        }
+    }
+    
     func realTime()
     {
-        
+        getRef.collection("usuarios").addSnapshotListener { (querySnapshot, error) in
+            if let error = error{
+                print("Error", error)
+            }else{
+                self.listaUsuarios.removeAll()
+                
+                for document in (querySnapshot?.documents)!
+                {
+                    let id = document.documentID
+                    let valores = document.data()
+                    let nombre = valores["nombre"] as? String ?? "no hay dato de nombre"
+                    let appelido = valores["apellido"] as? String ?? "no hay dato de apellido"
+                    
+                    let users = Usuarios(nombre: nombre, apellido: appelido, id: id)
+                    self.listaUsuarios.append(users)
+                    self.tabla.reloadData()
+                }
+                
+            }
+        }
     }
     func todo()
     {
+        /*
         getRef.collection("usuarios").whereField("nombre", isEqualTo: "Leslie").getDocuments { (querySnapshot, error) in
             if let error = error{
                 print("Error", error)
@@ -64,7 +98,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 
             }
         }
-        
+        */
         /*
         getRef.collection("usuarios").getDocuments { (querySnapshot, error) in
             if let error = error{

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2CFADECAC55A367DFAB342F1 /* Pods_CrudFirestore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AD3D1E0201AD2BD4638D9F4 /* Pods_CrudFirestore.framework */; };
 		D76DB48021EF775800AC5D8E /* Usuarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76DB47F21EF775800AC5D8E /* Usuarios.swift */; };
+		D76DB48421EF8B5D00AC5D8E /* EditarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76DB48321EF8B5D00AC5D8E /* EditarViewController.swift */; };
 		D7BD833921EF64970044B6ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BD833821EF64970044B6ED /* AppDelegate.swift */; };
 		D7BD833B21EF64970044B6ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BD833A21EF64970044B6ED /* ViewController.swift */; };
 		D7BD833E21EF64970044B6ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7BD833C21EF64970044B6ED /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 		4AD3D1E0201AD2BD4638D9F4 /* Pods_CrudFirestore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CrudFirestore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F84C6FD3AEAD9ADF8DA8BA1 /* Pods-CrudFirestore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrudFirestore.release.xcconfig"; path = "Pods/Target Support Files/Pods-CrudFirestore/Pods-CrudFirestore.release.xcconfig"; sourceTree = "<group>"; };
 		D76DB47F21EF775800AC5D8E /* Usuarios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuarios.swift; sourceTree = "<group>"; };
+		D76DB48321EF8B5D00AC5D8E /* EditarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarViewController.swift; sourceTree = "<group>"; };
 		D7BD833521EF64970044B6ED /* CrudFirestore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrudFirestore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7BD833821EF64970044B6ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7BD833A21EF64970044B6ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			children = (
 				D7BD833821EF64970044B6ED /* AppDelegate.swift */,
 				D7BD833A21EF64970044B6ED /* ViewController.swift */,
+				D76DB48321EF8B5D00AC5D8E /* EditarViewController.swift */,
 				D76DB47F21EF775800AC5D8E /* Usuarios.swift */,
 				D7BD833C21EF64970044B6ED /* Main.storyboard */,
 				D7BD833F21EF64980044B6ED /* Assets.xcassets */,
@@ -251,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7BD833B21EF64970044B6ED /* ViewController.swift in Sources */,
+				D76DB48421EF8B5D00AC5D8E /* EditarViewController.swift in Sources */,
 				D76DB48021EF775800AC5D8E /* Usuarios.swift in Sources */,
 				D7BD833921EF64970044B6ED /* AppDelegate.swift in Sources */,
 			);
